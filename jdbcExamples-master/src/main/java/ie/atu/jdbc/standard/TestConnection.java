@@ -1,8 +1,7 @@
-package ie.atu.standard;
-
+package ie.atu.jdbc.standard;
 import java.sql.*;
 
-public class TestConnection  {
+public class TestConnection {
 
     public static void main(String[] args) {
 
@@ -12,7 +11,7 @@ public class TestConnection  {
             // Load the driver class
             Class.forName("com.mysql.cj.jdbc.Driver");
             // Create a connection to the database, hardcoding values for now.
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlinecarstore", "root", "password");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/exampledatabase", "root", "password");
             System.out.println("Connection made to connection pool");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -29,5 +28,4 @@ public class TestConnection  {
             }
         }
     }
-
 }
