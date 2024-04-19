@@ -10,8 +10,8 @@ public class Store extends DatabaseConnection {
             while (resultSet.next()) {
                 String Email = resultSet.getString("Email");
                 String Number = resultSet.getString("Phone_Number");
-
-                System.out.println("\nEmail: " + Email + ", Phone number: " + Number);
+                String Owner = resultSet.getString("Owner_Id");
+                System.out.println("\nEmail: " + Email + ", Phone number: " + Number + ", owner: " + Owner);
             }
         }
     }
@@ -20,9 +20,10 @@ public class Store extends DatabaseConnection {
     public void insert() throws SQLException {
         try (Connection connection = getConnection();
              // Insert a new record into the "users" table
-             PreparedStatement stmt = connection.prepareStatement("INSERT INTO store (Email, Phone_Number) VALUES (?, ?)")) {
+             PreparedStatement stmt = connection.prepareStatement("INSERT INTO store (Email, Phone_Number, Owner_Id) VALUES (?, ?,?)")) {
             stmt.setString(1, "Lisa@gmail.com");
-            stmt.setString(2, "0873352205");
+            stmt.setString(2, "087335220");
+            stmt.setString(3, "Peter");
             stmt.executeUpdate();
 
             System.out.println("Insert completed successfully.");
@@ -43,7 +44,7 @@ public class Store extends DatabaseConnection {
 
     public void delete() throws SQLException {
         try (Connection connection = getConnection();
-             PreparedStatement stmt = connection.prepareStatement("DELETE FROM store WHERE Email = 'Lisa@gmail.com'")) {
+             PreparedStatement stmt = connection.prepareStatement("DELETE FROM store WHERE Email = 'Mark@gmail.com'")) {
             int rowsDeleted = stmt.executeUpdate();
             System.out.println("Rows deleted: " + rowsDeleted);
 

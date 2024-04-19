@@ -31,7 +31,7 @@ public class Menu {
                         continue;
                 }
 
-                System.out.println("Select Operation:\n1. Select\n2. Insert\n3. Update\n4. Delete");
+                System.out.println("Select Operation:\n1. Read\n2. Create\n3. Update\n4. Delete");
                 int operation = scanner.nextInt();
 
 
