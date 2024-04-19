@@ -14,7 +14,7 @@ public class Car extends DatabaseConnection {
                 String modelYear = resultSet.getString("Model_Year");
                 String mileage = resultSet.getString("Mileage");
                 //String selectSQL = "SELECT * FROM car";
-                System.out.println("\nCar id: " + carId + ", Engine size: " + engineSize + ", Model year: " + modelYear + ", Mileage: " + mileage);
+                System.out.println("\nCar id: " + carId + ", Engine size: " + engineSize+"Litres" + ", Model year: " + modelYear + ", Mileage: " + mileage);
             }
         }
     }
