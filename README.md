@@ -7,3 +7,4 @@ DATABASE OPERATIONS:This class provides a contract for customer, payment, car an
 DATABASE CONNECTION:This class inherits from customer, payment, car and store classes and implements the methods from DATABASE OPERATIONS.
 CAR TEST:This is a testing class that uses junit to test the CRUD operations, it checks if the select, insert, update,delete, methods exist and verifies the outcome of the operation.
 TEST CONNECTION:This confirms that the user is connected to the database when it is ran, if not it will print an error
+OOP Proj is the microsoft project gannt chart
