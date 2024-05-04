@@ -17,3 +17,5 @@ CAR TEST:This is a testing class that uses junit to test the CRUD operations, it
 TEST CONNECTION:This confirms that the user is connected to the database when it is ran, if not it will print an error
 
 OOP Proj is the microsoft project gannt chart
+
+DATABASE.SQL is my database for the project.
